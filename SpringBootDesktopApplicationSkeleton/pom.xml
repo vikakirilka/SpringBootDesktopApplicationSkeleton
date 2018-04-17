@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.itstep</groupId>
+  <artifactId>SpringBootDesktopApplicationSkeleton</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>SpringBootDesktopApplicationSkeleton</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
+    <spring-context.version>5.0.4.RELEASE</spring-context.version>
+    <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
+    <junit.version>4.12</junit.version>
+  </properties>
+
+  <dependencies>
+ 
+  <!-- SPRING-CONTEXT --> 
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring-context.version}</version>
+    </dependency>
+
+  <!-- SPRING-BOOT -->
+   <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter</artifactId>
+     <version>${spring-boot.version}</version>
+ </dependency>
+
+  
+  <!-- JUNIT -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.25</version>
+</dependency>
+
+  <dependency>
+    <groupId> org.apache.cassandra</groupId>
+    <artifactId>cassandra-all</artifactId>
+    <version>0.8.1</version>
+
+    <exclusions>
+      <exclusion> 
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+      </exclusion>
+      <exclusion> 
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+      </exclusion>
+    </exclusions> 
+
+  </dependency>
+  
+  <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>1.7.25</version>
+    <scope>test</scope>
+</dependency>
+  
+    
+  
+  </dependencies>
+</project>
